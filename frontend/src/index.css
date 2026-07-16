@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+
+  0%{
+    left:-120%;
+  }
+
+  100%{
+    left:160%;
+  }
+
+  color{
+    color: #f6b338;
+  }
+
+}
+
