@@ -1,7 +1,7 @@
 import {
   FacebookLogo,
-  XLogo,
-  InstagramLogo,
+  MapPin,
+  PhoneCall,
   LinkedinLogo,
   EnvelopeSimple,
   GithubLogoIcon,
@@ -105,16 +105,20 @@ export const Footer = () => {
             </p>
 
             <div className="mt-8 flex gap-4">
-              {[FacebookLogo, LinkedinLogo, DribbbleLogoIcon, BehanceLogoIcon, GithubLogoIcon].map(
-                (Icon, index) => (
-                  <div
-                    key={index}
-                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray-600 transition hover:border-[#6c4cff] hover:bg-[#6c4cff]"
-                  >
-                    <Icon size={16} />
-                  </div>
-                ),
-              )}
+              {[
+                FacebookLogo,
+                LinkedinLogo,
+                DribbbleLogoIcon,
+                BehanceLogoIcon,
+                GithubLogoIcon,
+              ].map((Icon, index) => (
+                <div
+                  key={index}
+                  className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-gray-600 transition hover:border-[#6c4cff] hover:bg-[#6c4cff]"
+                >
+                  <Icon size={16} />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -126,24 +130,20 @@ export const Footer = () => {
             <div className="mt-5 h-[2px] w-24 bg-[#E6B33C]"></div>
 
             <ul className="mt-8 space-y-5">
-              {[
-                "Home",
-                "About Us",
-                "Services",
-                "Solutions",
-                "Careers",
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
-                >
-                  <span className="text-[#E6B33C] transition group-hover:translate-x-1">
-                    →
-                  </span>
+              {["Home", "About Us", "Services", "Solutions", "Careers"].map(
+                (item, index) => (
+                  <li
+                    key={index}
+                    className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
+                  >
+                    <span className="text-[#E6B33C] transition group-hover:translate-x-1">
+                      →
+                    </span>
 
-                  {item}
-                </li>
-              ))}
+                    {item}
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
@@ -176,45 +176,79 @@ export const Footer = () => {
             </ul>
           </div>
 
-          
-
           {/* Recent Posts */}
 
           <div>
-            <h3 className="text-2xl font-semibold uppercase">Recent Posts</h3>
+            <h3 className="text-2xl font-semibold uppercase">Contact Info</h3>
 
             <div className="mt-5 h-[2px] w-24 bg-[#E6B33C]"></div>
 
-            <div className="mt-8 space-y-6">
-              <div className="flex gap-4">
-                <img
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200"
-                  alt=""
-                  className="h-20 w-20 object-cover"
-                />
+            <div className="mt-8 space-y-8">
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E6B33C]">
+                  <MapPin size={22} weight="fill" className="text-[#E6B33C]" />
+                </div>
 
                 <div>
-                  <p className="text-sm text-[#E6B33C]">15 March, 2025</p>
-
-                  <h4 className="mt-2 cursor-pointer text-md font-semibold leading-7 transition hover:text-[#6c4cff]">
-                    Transforming Businesses Through Technology
-                  </h4>
+                  <p className="mt-1 text-gray-400 leading-7">
+                    Bengal Eco Intelligent Park, EM <br />Block , Sector V, Kolkata-700 091
+                  </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200"
-                  alt=""
-                  className="h-20 w-20  object-cover"
-                />
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E6B33C]">
+                  <PhoneCall
+                    size={22}
+                    weight="fill"
+                    className="text-[#E6B33C]"
+                  />
+                </div>
 
                 <div>
-                  <p className="text-sm text-[#E6B33C]">28 March, 2025</p>
 
-                  <h4 className="mt-2 cursor-pointer text-md font-semibold leading-7 transition hover:text-[#6c4cff]">
-                    Creative Solutions For Modern Startups
-                  </h4>
+                  <a
+                    href="tel:+16465759575"
+                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                  >
+                    +1-646-575-9575
+                  </a>
+
+                  <a
+                    href="tel:+919830371143"
+                    className="block text-gray-400 hover:text-[#E6B33C]"
+                  >
+                    +91-983-037-1143
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E6B33C]">
+                  <EnvelopeSimple
+                    size={22}
+                    weight="fill"
+                    className="text-[#E6B33C]"
+                  />
+                </div>
+
+                <div>
+                 
+                  <a
+                    href="mailto:support@ahaansoftware.com"
+                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                  >
+                    support@ahaansoftware.com
+                  </a>
+                  <a
+                    href="mailto:hr@ahaansoftware.com"
+                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                  >
+                    hr@ahaansoftware.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -244,7 +278,6 @@ export const Footer = () => {
             <a href="#" className="transition hover:text-[#6c4cff]">
               Terms & Conditions
             </a>
-
           </div>
         </div>
       </div>
