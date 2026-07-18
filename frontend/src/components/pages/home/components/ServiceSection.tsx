@@ -132,15 +132,12 @@ export const ServicesSection = () => {
         }
       `}</style>
 
-            <div className="mx-auto  text-center mb-16">
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 block mb-3">
-                    What We Do
-                </span>
+            <div className="max-w-6xl mx-auto  text-center mb-16">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1c1d20] leading-tight">
                     Our Core Services <br />
 
                 </h2>
-                <p className="lg:text-base text-sm">
+                <p className="lg:text-base text-sm px-4 sm:px-8 mt-2">
                     We are driven by a passion to deliver excellence through continuous
                     innovation and cutting-edge technology — creating intelligent,
                     scalable, and future-ready solutions that empower businesses,
@@ -155,7 +152,7 @@ export const ServicesSection = () => {
                     <div
                         key={index}
                         onMouseEnter={() => replay(index)}
-                        className="group flex lg:gap-5 gap-2 items-start bg-transparent p-2 lg:p-4 rounded-xl transition-all duration-300 ease-out  hover:bg-white hover:-translate-y-1 hover:shadow-[0_28px_40px_-14px_rgba(12,102,228,0.12)]"
+                        className="group flex lg:gap-5 gap-2 items-start bg-transparent p-2 lg:p-4 rounded-xl transition-all duration-300 ease-out  hover:bg-white hover:-translate-y-1 hover:shadow-[0_28px_40px_-14px_rgba(196,138,24,0.35)]"
                     >
                         {/* Custom Icon Container */}
                         <div className="flex-shrink-0 pt-1">
@@ -170,7 +167,7 @@ export const ServicesSection = () => {
 
                         {/* Typography Content */}
                         <div className="flex flex-col items-start text-left">
-                            <h3 className="mb-2 text-sm lg:text-[21px] font-bold text-[#1c1d20] tracking-tight transition-colors duration-200 group-hover:text-[#0c66e4]">
+                            <h3 className="mb-2 text-sm lg:text-[21px] font-bold text-[#1c1d20] tracking-tight transition-colors duration-200 group-hover:text-[#C48A18]">
                                 {title}
                             </h3>
                             <p className="text-xs lg:text-base  leading-[1.65] text-gray-500 font-normal mb-3.5 max-w-[280px]">
@@ -178,7 +175,7 @@ export const ServicesSection = () => {
                             </p>
                             <a
                                 href="#"
-                                className="text-[14px] font-bold text-[#0c66e4] inline-flex items-center gap-1 transition-all duration-200 group-hover:gap-2 hover:underline"
+                                className="text-[14px] font-bold text-[#C48A18] inline-flex items-center gap-1 transition-all duration-200 group-hover:gap-2 hover:underline"
                             >
                                 Discover now <span className="text-[15px] font-normal">→</span>
                             </a>
@@ -189,10 +186,28 @@ export const ServicesSection = () => {
 
             {/* Bottom Action Footer Buttons */}
             <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
-                <button className="w-full sm:w-auto px-7 py-3.5 text-[14px] font-bold text-white bg-[#0c66e4] rounded border border-[#0c66e4] hover:bg-[#0b5ac9] transition-all shadow-sm">
+                <button className="shine-btn relative overflow-hidden uppercase
+                bg-gradient-to-r
+                from-[#C48A18]
+                to-[#E6B33C]
+                px-5
+                xl:px-6
+                2xl:px-8
+                py-3
+                xl:py-3.5
+                text-sm
+                xl:text-base
+                font-semibold
+                text-black
+                shadow-xl
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:from-[#B57A0C]
+                hover:to-[#D69D20]">
                     Talk to a consultant
                 </button>
-                <button className="w-full sm:w-auto px-7 py-3.5 text-[14px] font-bold text-[#0c66e4] bg-transparent rounded border border-[#0c66e4]/30 hover:border-[#0c66e4] hover:bg-[#0c66e4]/05 transition-all">
+                <button className="shine-btn  w-full sm:w-auto px-7 py-3.5 text-[14px] font-bold text-[#C48A18] bg-transparent  border border-[#C48A18]/30 hover:border-[#C48A18] hover:bg-[#C48A18]/05 transition-all">
                     Contact us now
                 </button>
             </div>

@@ -27,10 +27,15 @@ export const OurClients = () => {
       <div className="mx-auto max-w-[1600px] px-6">
         
         {/* Simple Header */}
-        <div className="mb-14 text-center">
-          <h2 className="text-2xl  text-800 sm:text-3xl">
+        <div className="max-w-6xl mx-auto text-center px-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1c1d20] leading-tight">
             Our Clients
           </h2>
+          <p className="lg:text-base text-sm px-4 sm:px-8 mt-3 text-[#161616] leading-7  mx-auto mb-8">
+            From strategy and planning to development, testing, and deployment,
+            we follow a structured process that ensures every project is
+            delivered with quality, efficiency, and measurable business results.
+          </p>
         </div>
 
         {/* Clean Logo Grid - 4 in a row */}

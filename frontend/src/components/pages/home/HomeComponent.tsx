@@ -6,10 +6,12 @@ import { OurTechnology } from "./components/OurTechnology"
 import {ServicesSection} from "./components/ServiceSection"
 import { TotalProject } from "./components/TotalProject"
 import { WhyChooseUs } from "./components/WhyChooseUs"
+import { HomeBanner } from "./components/HomeBanner"
 
 export const HomeComponent = () => {
   return (
     <div>
+      <HomeBanner/>
       <ServicesSection/>
       <OurTechnology/>
       <WhyChooseUs/>

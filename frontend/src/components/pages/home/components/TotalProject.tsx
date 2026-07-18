@@ -182,7 +182,7 @@ export const TotalProject= () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[#1C1B19] px-6 py-28">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#0A0A0A] px-6 py-28">
       {/* subtle vignette / wall texture */}
       <div
         aria-hidden
@@ -195,12 +195,14 @@ export const TotalProject= () => {
 
       <div className="relative mx-auto max-w-6xl">
         <div className="mb-24 text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[#C9A227]">
-            Hall of Record
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold text-[#F0EAD9] sm:text-4xl">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#fff] leading-tight">
             Measured in years, hung on the wall
           </h2>
+          <p className="lg:text-base text-sm px-4 sm:px-8 mt-3 text-[#8A8A8A] leading-7  mx-auto">
+            From strategy and planning to development, testing, and deployment,
+            we follow a structured process that ensures every project is
+            delivered with quality, efficiency, and measurable business results.
+          </p>
         </div>
 
         {/* rail */}

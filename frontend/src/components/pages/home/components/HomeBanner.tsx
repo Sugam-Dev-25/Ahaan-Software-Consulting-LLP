@@ -1,0 +1,194 @@
+import { useState, useEffect } from "react";
+import { Play } from "@phosphor-icons/react";
+import webapp from "../../../../assets/wep-app.png";
+import TechOrbit from "./TechOrbit";
+
+const SERVICES_DATA = [
+  {
+    id: "web-dev",
+    titleMain: "Powerful & Scalable",
+    titleHighlight: "Web-App Development ",
+    subheading:
+      "We build fast, secure, scalable, and fully customized web applications tailored to your business goals.",
+    highlightColorClass: "text-sky-600",
+    illustration: (
+      <img
+        src={webapp}
+        alt="Web App Development"
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  {
+    id: "web-design",
+    titleMain: "Modern & Engaging",
+    titleHighlight: "Web Design Experiences",
+    subheading:
+      "Modern, responsive, and user-focused website designs that deliver exceptional user experiences across all devices.",
+    highlightColorClass: "text-indigo-600",
+    illustration: (
+      <img
+        src={webapp}
+        alt="Web App Development"
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  {
+    id: "ecommerce",
+    titleMain: "Enterprise-Grade",
+    titleHighlight: "E-Commerce Development",
+    subheading:
+      "End-to-end eCommerce solutions with secure payments, inventory management, and conversion-focused online stores.",
+    highlightColorClass: "text-blue-600",
+    illustration: (
+      <img
+        src={webapp}
+        alt="Web App Development"
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  {
+    id: "shopify",
+    titleMain: "Conversion-Focused",
+    titleHighlight: "Shopify Development",
+    subheading:
+      "High-converting Shopify stores with custom design, seamless integrations, and optimized shopping experiences.",
+    highlightColorClass: "text-emerald-600",
+    illustration: (
+      <img
+        src={webapp}
+        alt="Web App Development"
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+  {
+    id: "wordpress",
+    titleMain: "High-Performance",
+    titleHighlight: "WordPress Development ",
+    subheading:
+      "Powerful WordPress websites with custom themes, plugins, optimized performance, and easy content management.",
+    highlightColorClass: "text-amber-600",
+    illustration: (
+      <img
+        src={webapp}
+        alt="Web App Development"
+        className="w-full h-full object-contain"
+      />
+    ),
+  },
+];
+
+export function HomeBanner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % SERVICES_DATA.length);
+        setIsTransitioning(false);
+      }, 350);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentService = SERVICES_DATA[currentIndex];
+
+  return (
+    <div className="relative w-full min-h-[600px] lg:min-h-[700px] flex items-center justify-center bg-slate-50/70 overflow-hidden px-4 sm:px-8 py-12 lg:py-20">
+      {/* Brand Golden Ambient Glows */}
+      <div className="absolute top-[-10%] right-[-5%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-[#E5C473]/15 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-[-15%] left-[-5%] w-[450px] sm:w-[650px] h-[450px] sm:h-[650px] rounded-full bg-[#C5A85A]/10 blur-[150px] pointer-events-none" />
+
+      {/* Constrained to max-w-[1600px] & Fully Responsive */}
+      <div className="max-w-[1600px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10 mx-auto">
+        {/* Left Typography Column */}
+        <div className="lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8 text-left px-2 sm:px-4">
+          <h1 className="text-[35px] sm:text-[35px] md:text-[45px] lg:text-[63px] font-black text-slate-900 tracking-tight leading-[1.1] min-h-[90px] sm:min-h-[120px] md:min-h-[140px]">
+            <span
+              className={`block transition-all duration-300 transform ${
+                isTransitioning
+                  ? "opacity-0 translate-y-4 filter blur-sm"
+                  : "opacity-100 translate-y-0 filter blur-none"
+              }`}
+            >
+              {currentService.titleMain}
+              <span
+                className={`block mt-2 font-extrabold ${currentService.highlightColorClass}`}
+              >
+                {currentService.titleHighlight}
+              </span>
+            </span>
+          </h1>
+
+          <p
+            className={`text-slate-600 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl transition-all duration-300 delay-70 ${
+              isTransitioning
+                ? "opacity-0 -translate-y-1"
+                : "opacity-100 translate-y-0"
+            }`}
+          >
+            {currentService.subheading}
+          </p>
+
+          <p className="text-slate-400 font-medium text-xs sm:text-sm tracking-wide">
+            Enterprise Solutions for{" "}
+            <span className="text-slate-700 font-extrabold decoration-[#C5A85A] decoration-2 underline-offset-4">
+              {currentService.titleHighlight}
+            </span>
+            .
+          </p>
+
+          {/* Premium Call to Actions */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
+            <button
+              className="shine-btn relative overflow-hidden uppercase
+                bg-gradient-to-r
+                from-[#C48A18]
+                to-[#E6B33C]
+                px-5
+                xl:px-6
+                2xl:px-8
+                py-3
+                xl:py-3.5
+                text-sm
+                xl:text-base
+                font-semibold
+                text-black
+                shadow-xl
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:from-[#B57A0C]
+                hover:to-[#D69D20]"
+            >
+              Schedule a Meeting
+            </button>
+
+            <button className="flex items-center gap-3 text-slate-700 hover:text-slate-900 font-bold py-3 group transition-colors text-sm sm:text-base">
+              <span className="w-11 h-11 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:bg-slate-100 transition-colors">
+                <Play
+                  size={16}
+                  weight="fill"
+                  className="text-[#C5A85A] ml-0.5"
+                />
+              </span>
+              Watch 45 Second Overview
+            </button>
+          </div>
+        </div>
+
+        {/* Right Dynamic Big Image/Illustration Column */}
+        {/* Right Tech Orbit */}
+        <div className="lg:col-span-5 flex justify-center lg:justify-end px-2">
+          <TechOrbit />
+        </div>
+      </div>
+    </div>
+  );
+}
