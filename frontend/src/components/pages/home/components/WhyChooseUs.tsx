@@ -4,7 +4,6 @@ import {
   ShieldCheck,
   UsersThree,
   SealCheck,
-  ArrowRight,
   type IconProps,
 } from "@phosphor-icons/react";
 
