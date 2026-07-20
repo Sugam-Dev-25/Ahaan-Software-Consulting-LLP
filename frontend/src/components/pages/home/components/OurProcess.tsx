@@ -68,7 +68,7 @@ export const OurProcess = () => {
 
   return (
     <div className="bg-[#0a0800] overflow-hidden py-[50px]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="p-0 sm:p-[32px_24px_20px] md:p-[10px_48px_28px_0px] border-b border-[#2a2200] flex">

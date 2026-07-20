@@ -62,10 +62,10 @@ export const WhyChooseUs: React.FC = () => {
 
   return (
     <section className="w-full bg-[#0A0A0A] text-[#F5F1E8] py-28 px-6 md:px-12 lg:px-20 overflow-hidden font-['Outfit']">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1600px]">
         
         {/* TOP INTERACTIVE CONTROLLER / HEADER */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 ">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-1 w-8 bg-[#CD912A]" />
@@ -79,11 +79,7 @@ export const WhyChooseUs: React.FC = () => {
             </h2>
           </div>
           
-          <div className="lg:col-span-6 lg:pl-12">
-            <p className="text-[#8A8A8A] text-base md:text-lg leading-relaxed max-w-xl">
-              We aren't just another service provider. We act as a high-velocity extension of your core engine, combining modern workflows with precise tactical execution.
-            </p>
-          </div>
+         
         </div>
 
         {/* PERSISTENT TAB STEP INDICATOR BAR */}
