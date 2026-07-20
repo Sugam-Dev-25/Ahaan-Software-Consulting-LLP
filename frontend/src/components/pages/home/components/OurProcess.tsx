@@ -66,18 +66,13 @@ export const OurProcess = () => {
 
   return (
 
-    <div className="bg-[#0a0800] overflow-hidden py-[50px]">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        
 
     <div className="bg-[#0A0A0A] overflow-hidden py-[50px]">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-14">
-
         <div className="max-w-5xl mx-auto text-center pb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#fff] leading-tight">
             Our Proven Development Process
           </h2>
-
           <p className="lg:text-base text-sm px-4 sm:px-8 mt-3 text-[#8A8A8A] leading-7  mx-auto">
             From strategy and planning to development, testing, and deployment,
             we follow a structured process that ensures every project is

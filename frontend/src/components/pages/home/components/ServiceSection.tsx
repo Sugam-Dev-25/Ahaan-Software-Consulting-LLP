@@ -14,7 +14,9 @@ const services: Service[] = [
             "Custom software solutions tailored to business needs, ensuring scalability, performance, and innovation for seamless digital transformation and growth.",
         Icon: ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                <rect x="2.5" y="4" width="19" height="15.6" rx="1.5" />
+                <path d="M6.5 9.3l3.2 2.7-3.2 2.7" />
+                <path d="M12.3 14.7h5.2" />
             </svg>
         ),
     },
@@ -24,8 +26,15 @@ const services: Service[] = [
             "We build responsive, secure, and highly user-friendly websites tailored to your brand, enhancing online presence and driving sustainable business success.",
         Icon: ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="14" x="2" y="7" rx="2" />
-                <path d="M16 21V7a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v14M12 12h.01" />
+                <path d="M2.5 4h15.6a1 1 0 0 1 1 1v8.6a1 1 0 0 1-1 1H2.5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z" />
+                <path d="M7.2 14.6v2.6" />
+                <path d="M12 14.6v2.6" />
+                <path d="M5.3 18.1h8.4" />
+                <g transform="translate(1.1, 0)">
+                    <path d="M6.4 6.6L4.6 9l1.8 2.4" />
+                    <path d="M10.3 6l-2 6" />
+                    <path d="M12 6.6l1.8 2.4-1.8 2.6" />
+                </g>
             </svg>
         ),
     },
@@ -35,8 +44,13 @@ const services: Service[] = [
             "Providing expert IT consulting to optimize operations, drive innovation, and align technology strategies with your business goals for maximum impact.",
         Icon: ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="13" r="8" />
-                <path d="M12 9v4l2 2M5 3 2 6M19 3l3 6M12 21v1" />
+                <path d="M9.2 8.2V6.6a1.3 1.3 0 0 1 1.3-1.3h3a1.3 1.3 0 0 1 1.3 1.3v1.6" />
+                <rect x="2.5" y="8.2" width="19" height="11.3" rx="1.5" />
+                <path d="M2.5 13.2h19" />
+                <path d="M6.2 16.2v-1.6" />
+                <path d="M10.4 16.2v-3.4" />
+                <path d="M14.6 16.2v-5.4" />
+                <path d="M18.4 16.2v-2.4" />
             </svg>
         ),
     },
@@ -45,10 +59,11 @@ const services: Service[] = [
         description:
             "Crafting intuitive, engaging, and user-centered designs that enhance usability, improve user satisfaction, and elevate your brand's digital experience.",
         Icon: ({ className }) => (
+            // Option A — mockup screen
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-                <path d="M2 22h20" />
+                <path d="M12 3.2l9 5-9 5-9-5 9-5Z" />
+                <path d="M3 12.2l9 5 9-5" />
+                <path d="M3 16.2l9 5 9-5" />
             </svg>
         ),
     },
@@ -58,9 +73,13 @@ const services: Service[] = [
             "We provide the most responsive and functional IT design for companies and businesses worldwide.",
         Icon: ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <ellipse cx="12" cy="6" rx="6" ry="3" />
-                <path d="M6 6v6c0 1.66 2.7 3 6 3s6-1.34 6-3V6" />
-                <path d="M6 12v6c0 1.66 2.7 3 6 3s6-1.34 6-3v-6" />
+                <rect x="9" y="2.8" width="6" height="4" rx="1" />
+                <rect x="2.5" y="15.2" width="6" height="4" rx="1" />
+                <rect x="9" y="15.2" width="6" height="4" rx="1" />
+                <rect x="15.5" y="15.2" width="6" height="4" rx="1" />
+                <path d="M12 6.8v4.4" />
+                <path d="M5.5 15.2v-2.4h13v2.4" />
+                <path d="M12 12.8v2.4" />
             </svg>
         ),
     },
@@ -70,8 +89,11 @@ const services: Service[] = [
             "It's possible to simultaneously manage and transform information from one server to another.",
         Icon: ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z" />
-                <path d="M8 6h6M8 10h6M8 14h6" />
+                <rect x="5" y="4" width="14" height="17.6" rx="1.5" />
+                <rect x="9" y="2.4" width="6" height="3" rx="1" />
+                <path d="M8 10.8h8" />
+                <path d="M8 14.2h8" />
+                <path d="M8 17.6h5" />
             </svg>
         ),
     },
@@ -161,7 +183,7 @@ export const ServicesSection = () => {
                                 className={`w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 text-neutral-800 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${inView ? "is-visible" : ""
                                     }`}
                             >
-                                <Icon className="w-12 h-12 svg-animate" />
+                                <Icon className="w-12 h-12 svg-animate group-hover:text-[#C48A18]" />
                             </div>
                         </div>
 
