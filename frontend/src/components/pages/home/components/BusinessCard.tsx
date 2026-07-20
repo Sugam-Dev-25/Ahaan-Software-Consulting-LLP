@@ -173,23 +173,15 @@ export const BusinessCard = () => {
           }
         >
           <h2
-            className={
-              "gradient-title block text-center capitalize mb-5 font-extrabold " +
-              "text-[2rem] max-[500px]:text-2xl leading-[1.3] " +
-              "font-['Outfit',sans-serif] " +
-              "[text-shadow:0_0_8px_rgba(207,167,74,0.3)]"
-            }
+            className="text-3xl sm:text-4xl font-extrabold text-[#161616] leading-tight"
           >
-            Trusted by leaders from various industries
+            Trusted by Businesses Worldwide
           </h2>
           <p
-            className={
-              "mt-2.5 text-[1.2rem] text-[#666] " +
-              "min-[501px]:max-[991px]:text-base max-[500px]:text-sm"
-            }
+            className=
+            "lg:text-base text-sm px-4 sm:px-8 mt-3 text-[#000] leading-7  mx-auto"
           >
-            Learn why professionals trust our solutions to complete their
-            customer journeys.
+            We aren't just another service provider. We act as a high-velocity extension of your core engine, combining modern workflows with precise tactical execution.
           </p>
         </div>
 

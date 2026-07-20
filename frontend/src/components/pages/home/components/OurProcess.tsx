@@ -46,9 +46,7 @@ export const OurProcess = () => {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setVisible((prev) =>
-              prev.includes(idx) ? prev : [...prev, idx]
-            );
+            setVisible((prev) => (prev.includes(idx) ? prev : [...prev, idx]));
             setDone((prev) => {
               const next = [...prev];
               for (let i = 0; i < idx; i++) {
@@ -58,7 +56,7 @@ export const OurProcess = () => {
             });
           }
         },
-        { threshold: 0.45 }
+        { threshold: 0.45 },
       );
       obs.observe(el);
       return obs;
@@ -68,15 +66,24 @@ export const OurProcess = () => {
 
   return (
     <div className="bg-[#0a0800] overflow-hidden py-[50px]">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="p-0 sm:p-[32px_24px_20px] md:p-[10px_48px_28px_0px] border-b border-[#2a2200] flex">
-          <p className="text-[14px] uppercase tracking-[0.2em] font-semibold text-[#c8a030] font-['Outfit',sans-serif]">
-            Our Process
+        {/* Header */}
+        <div className="max-w-5xl mx-auto text-center pb-16">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#fff] leading-tight">
+            Our Proven Development Process
+          </h2>
+
+          <p className="lg:text-base text-sm px-4 sm:px-8 mt-3 text-[#8A8A8A] leading-7  mx-auto">
+            From strategy and planning to development, testing, and deployment,
+            we follow a structured process that ensures every project is
+            delivered with quality, efficiency, and measurable business results.
           </p>
         </div>
 
+        {/* Divider */}
+        <div className="border-t border-[#2a2200]" />
         {/* Process Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-[#1e1800]">
           {steps.map((step, idx) => {
@@ -102,19 +109,21 @@ export const OurProcess = () => {
 
                 {/* Big Number Layer Container */}
                 <div className="text-[72px] sm:text-[96px] font-bold leading-[0.85] tracking-[-0.02em] shrink-0 w-[82px] sm:w-[108px] text-right relative select-none font-serif">
-                  
                   {/* Base Layer */}
-                  <span className={`block transition-colors duration-500 ease-out ${isDone ? "text-[#352906]" : "text-[#352906] group-hover:text-[#d8c7a1]"}`}>
+                  <span
+                    className={`block transition-colors duration-500 ease-out ${isDone ? "text-[#352906]" : "text-[#352906] group-hover:text-[#d8c7a1]"}`}
+                  >
                     {step.num}
                   </span>
 
                   {/* Stroke Layer */}
-                  <span 
+                  <span
                     className={`
                       absolute inset-0 flex items-start justify-end text-transparent transition-all duration-[600ms] ease-out
-                      ${isDone 
-                        ? "[webkit-text-stroke:2px_#d3d0ca]" 
-                        : "[webkit-text-stroke:2px_#beb9a5] group-hover:[webkit-text-stroke-color:#f5e8c8]"
+                      ${
+                        isDone
+                          ? "[webkit-text-stroke:2px_#d3d0ca]"
+                          : "[webkit-text-stroke:2px_#beb9a5] group-hover:[webkit-text-stroke-color:#f5e8c8]"
                       }
                     `}
                   >
@@ -122,13 +131,14 @@ export const OurProcess = () => {
                   </span>
 
                   {/* Dynamic Color Clip Fill Layer */}
-                  <span 
+                  <span
                     style={{ color: "#1c1500" }}
                     className={`
                       absolute inset-0 flex items-start justify-end text-[72px] sm:text-[96px] font-bold leading-[0.85] tracking-[-0.02em] font-serif
-                      ${isDone 
-                        ? "text-[#d8c7a1] [clip-path:inset(0%_0_0_0)] transition-none" 
-                        : `text-[#443a1d] group-hover:text-[#f0d38a] transition-[clip-path,color] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] delay-200
+                      ${
+                        isDone
+                          ? "text-[#d8c7a1] [clip-path:inset(0%_0_0_0)] transition-none"
+                          : `text-[#443a1d] group-hover:text-[#f0d38a] transition-[clip-path,color] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] delay-200
                            ${isVisible ? "[clip-path:inset(0%_0_0_0)]" : "[clip-path:inset(100%_0_0_0)]"}`
                       }
                     `}
@@ -138,23 +148,23 @@ export const OurProcess = () => {
                 </div>
 
                 {/* Gold Separation Bar */}
-                <div 
+                <div
                   className={`
                     w-[3px] shrink-0 self-stretch mx-[18px] origin-top transition-all duration-500 delay-[400ms]
-                    ${isDone 
-                      ? "bg-[#e8a820] opacity-100 scale-y-100" 
-                      : isVisible 
-                        ? "bg-[#c8a030] opacity-90 scale-y-100" 
-                        : "bg-[#c8a030] opacity-0 scale-y-0"
+                    ${
+                      isDone
+                        ? "bg-[#e8a820] opacity-100 scale-y-100"
+                        : isVisible
+                          ? "bg-[#c8a030] opacity-90 scale-y-100"
+                          : "bg-[#c8a030] opacity-0 scale-y-0"
                     }
                   `}
                 />
 
                 {/* Content Segment */}
                 <div className="pt-1 flex-1 font-['Outfit',sans-serif]">
-                  
                   {/* Phase Subtitle */}
-                  <div 
+                  <div
                     className={`
                       text-[9px] tracking-[0.22em] uppercase mb-1.5 transition-all duration-500 delay-500
                       ${isDone ? "text-[#c5a154]" : "text-[#c8a030]"}
@@ -165,7 +175,7 @@ export const OurProcess = () => {
                   </div>
 
                   {/* Step Title */}
-                  <div 
+                  <div
                     className={`
                       text-[15px] font-normal leading-[1.35] mb-1.5 tracking-[0.02em] transition-all duration-500 delay-[600ms]
                       ${isDone ? "text-white" : "text-[#f5edd8]"}
@@ -176,7 +186,7 @@ export const OurProcess = () => {
                   </div>
 
                   {/* Description */}
-                  <div 
+                  <div
                     className={`
                       text-[11px] leading-[1.6] transition-opacity duration-500 delay-[750ms]
                       ${isDone ? "text-[#9a8050]" : "text-[#6a5a38]"}
@@ -188,7 +198,7 @@ export const OurProcess = () => {
                 </div>
 
                 {/* Bottom Scanline Accent */}
-                <div 
+                <div
                   className={`
                     absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#c8a030] to-transparent transition-opacity duration-[600ms] delay-[800ms]
                     ${isDone ? "opacity-50" : isVisible ? "opacity-25" : "opacity-0"}
@@ -198,9 +208,7 @@ export const OurProcess = () => {
             );
           })}
         </div>
-
       </div>
     </div>
   );
 };
-
