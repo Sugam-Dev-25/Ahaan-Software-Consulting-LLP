@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react";
 
 const OUTER_ICONS = [
   {
@@ -68,6 +68,53 @@ type OrbitIconProps = {
   radius: number;
 };
 
+function responsiveRadius() {
+  const [radius, setRadius] = useState(150);
+
+  useEffect(() => {
+    const updateRadius = () => {
+      if (window.innerWidth < 1024) {
+        setRadius(92);
+      } else if (window.innerWidth < 1200) {
+        setRadius(120);
+      } else {
+        setRadius(150);
+      }
+    };
+
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+
+    return () => window.removeEventListener("resize", updateRadius);
+  }, []);
+
+  return radius;
+}
+
+function flexibleRadius() {
+  const [radius, setRadius] = useState(225);
+
+  useEffect(() => {
+    const updateRadius = () => {
+      if (window.innerWidth < 1024) {
+        setRadius(162);
+      } else if (window.innerWidth < 1200) {
+        setRadius(210);
+      } else {
+        setRadius(225);
+      }
+    };
+
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+
+    return () => window.removeEventListener("resize", updateRadius);
+  }, []);
+
+  return radius;
+}
+
+
 function OrbitIcon({
   image,
   label,
@@ -92,9 +139,9 @@ function OrbitIcon({
         className="group flex flex-col items-center"
       >
         <div
-          className="
-            w-14
-            h-14
+          className="w-10 h-10
+            md:w-12 xl:w-14
+            md:h-12 xl:h-14
             rounded-full
             bg-white
             border
@@ -113,7 +160,7 @@ function OrbitIcon({
           <img
             src={image}
             alt={label}
-            className="w-10 h-10 object-contain"
+            className="w-8 h-8 xl:w-10 xl:h-10 object-contain"
             draggable={false}
           />
         </div>
@@ -127,13 +174,15 @@ function OrbitIcon({
 }
 
 export default function TechOrbit() {
+  const  innerRadius = responsiveRadius();
+   const outerRadius = flexibleRadius();
   return (
-    <div className="relative flex items-center justify-center w-full h-[450px] lg:h-[500px] overflow-hidden">
+    <div className="relative flex items-center justify-center w-full h-[500px] lg:h-[650px] overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute w-[420px] h-[420px] rounded-full bg-[#E6B33C]/10 blur-[120px]" />
+      <div className="absolute w-[420px] h-[420px] rounded-full bg-[#E6B33C]/10 blur-[120px] px-2" />
 
       {/* Outer Orbit */}
-      <div className="absolute w-[450px] h-[450px] rounded-full border border-[#E6B33C]/20 animate-[spin_35s_linear_infinite]">
+      <div className="absolute w-[325px] h-[325px] md:w-[425px] md:h-[425px] xl:w-[450px] xl:h-[450px] rounded-full border border-[#E6B33C]/20 animate-[spin_35s_linear_infinite]">
         <div className="absolute inset-0 rounded-full border border-dashed border-[#E6B33C]/20" />
 
         {OUTER_ICONS.map((item) => (
@@ -142,13 +191,13 @@ export default function TechOrbit() {
             image={item.image}
             label={item.label}
             angle={item.angle}
-            radius={225}
+            radius={outerRadius}
           />
         ))}
       </div>
 
       {/* Inner Orbit */}
-      <div className="absolute w-[300px] h-[300px] rounded-full border border-slate-300 animate-[spin_25s_linear_infinite_reverse]">
+      <div className="absolute w-[185px] h-[185px] md:w-[245px] md:h-[245px]  xl:w-[300px] xl:h-[300px] rounded-full border border-slate-300 animate-[spin_25s_linear_infinite_reverse]">
         <div className="absolute inset-0 rounded-full border border-dashed border-slate-300/50" />
 
         {INNER_ICONS.map((item) => (
@@ -157,19 +206,19 @@ export default function TechOrbit() {
             image={item.image}
             label={item.label}
             angle={item.angle}
-            radius={150}
+            radius={innerRadius}
           />
         ))}
       </div>
 
       {/* Center Circle */}
-      <div className="relative z-10 flex items-center justify-center w-40 h-40 rounded-full bg-gradient-to-br from-[#161616] via-[#161616] to-amber-50 border border-slate-200 shadow-2xl">
-        <div className="absolute w-24 h-24 rounded-full bg-[#E6B33C]/20 blur-3xl animate-pulse" />
+      <div className="relative z-10 flex items-center justify-center  w-14 h-14  md:w-18 md:h-18 xl:w-40 xl:h-40 rounded-full bg-gradient-to-br from-[#161616] via-[#161616] to-amber-50 border border-slate-200 shadow-2xl">
+        <div className="absolute  w-10 h-10  md:w-12 md:h-12 xl:w-24 xl:h-24 rounded-full bg-[#E6B33C]/20 blur-3xl animate-pulse" />
 
         <img
           src="https://ahaanmedia.com/asc/layouts/fav.png"
           alt="Logo"
-          className="relative z-10 w-20 h-20 object-contain"
+          className="relative z-10 w-10 h-10 md:w-12 md:h-12 xl:w-20 xl:h-20 object-contain"
         />
       </div>
     </div>

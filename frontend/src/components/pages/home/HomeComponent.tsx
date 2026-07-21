@@ -8,7 +8,7 @@ import { TotalProject } from "./components/TotalProject"
 import { WhyChooseUs } from "./components/WhyChooseUs"
 import { HomeBanner } from "./components/HomeBanner"
 import { CallToAction } from "./components/CallToAction"
-import { AboutCompany } from "./components/AboutCompany"
+import Testimonials from "./components/Testimonials"
 
 export const HomeComponent = () => {
   return (
@@ -21,6 +21,7 @@ export const HomeComponent = () => {
       <BusinessCard/>
       <OurProcess/>
       <CaseStudies/>
+      <Testimonials/>
       <TotalProject/>
       <OurClients/>
       <CallToAction/>
