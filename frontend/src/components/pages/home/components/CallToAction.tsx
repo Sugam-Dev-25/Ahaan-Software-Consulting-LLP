@@ -3,7 +3,7 @@ import ctaBg from "../../../../assets/call-to-action.png";
 export function CallToAction() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat"
+      className="relative bg-cover bg-top md:bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${ctaBg})` }}
     >
       {/* Overlay */}
@@ -12,38 +12,38 @@ export function CallToAction() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-8">
         {/* Heading */}
-        <h2 className="text-center text-5xl  font-extrabold text-[#fff] leading-tight">
+        <h2 className="text-center text-[18px] md:text-5xl xl:text-5xl  font-extrabold text-[#fff] leading-tight">
           Ready to Innovate Your Business?
         </h2>
 
         {/* Contact Info */}
-        <div className="mt-14 flex flex-col items-center justify-center gap-10 md:flex-row">
+        <div className="mt-5 lg:mt-14 grid grid-cols-2 gap-6 md:flex md:items-center md:justify-center md:gap-10">
           {/* USA */}
           <div className="text-center">
-            <h3 className="text-3xl font-bold uppercase text-[#E6B33C]">
+            <h3 className="text-[16px] font-bold uppercase text-[#E6B33C] md:text-3xl">
               USA
             </h3>
 
             <a
               href="tel:+16465759575"
-              className="mt-4 block text-2xl font-semibold text-white transition hover:text-[#E6B33C]"
+              className="mt-4 block text-base font-semibold text-white transition hover:text-[#E6B33C] sm:text-[6px] md:text-2xl"
             >
               +1-646-575-9575
             </a>
           </div>
 
-          {/* Divider */}
+          {/* Divider - Desktop Only */}
           <div className="hidden h-20 w-px bg-white/30 md:block"></div>
 
           {/* INDIA */}
           <div className="text-center">
-            <h3 className="text-3xl font-bold uppercase text-[#E6B33C]">
+            <h3 className="text-[16px] font-bold uppercase text-[#E6B33C] md:text-3xl">
               INDIA
             </h3>
 
             <a
               href="tel:+919830371143"
-              className="mt-4 block text-2xl font-semibold text-white transition hover:text-[#E6B33C]"
+              className="mt-4 block text-base font-semibold text-white transition hover:text-[#E6B33C] sm:text-[6px] md:text-2xl"
             >
               +91-983-037-1143
             </a>
@@ -51,7 +51,7 @@ export function CallToAction() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-16 flex justify-center">
+        <div className="mt-5 lg:mt-16 flex justify-center">
           <button className="shine-btn relative overflow-hidden uppercase
                 bg-gradient-to-r
                 from-[#C48A18]

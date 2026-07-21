@@ -13,6 +13,7 @@ type Reason = {
   title: string;
   tagline: string;
   description: string;
+  image: string;
   Icon: React.ComponentType<IconProps>;
 };
 
@@ -21,36 +22,44 @@ const REASONS: Reason[] = [
     id: "values",
     index: "01",
     title: "Our Values",
-    tagline: "Uncompromising Ethical Standards",
+    tagline: "Our Values",
     description:
-      "We deliver services with absolute integrity, accuracy, and objectivity. By honoring the dignity of labor and upholding strict accountability, we build relationships grounded in long-term credibility.",
+      "We deliver services with integrity, accuracy, and objectivity, upholding ethical standards, accountability, and credibility while honoring the dignity of labor and striving for excellence.",
+    image:
+      "https://ahaanmedia.com/ahaanwebsite/All/Our-values.png",
     Icon: MagnifyingGlassPlus,
   },
   {
     id: "authenticity",
     index: "02",
     title: "Authenticity",
-    tagline: "Allied with Brands We Believe In",
+    tagline: "Authenticity",
     description:
-      "We explicitly partner with businesses whose vision matches our standards, ensuring genuine passion drives every milestone. True growth is born from transparency and transparent corporate alignment.",
+      "We ally with businesses we believe in, ensuring passion drives success. With authenticity at our core, we foster meaningful partnerships that create growth, value, and sustainability.",
+    image:
+      "https://ahaanmedia.com/ahaanwebsite/All/Authenticity.png",
     Icon: ShieldCheck,
   },
   {
     id: "talent",
     index: "03",
     title: "Top Talent",
-    tagline: "A Collective Win-Win Mindset",
+    tagline: "Top Talent",
     description:
-      "Our elite experts integrate directly into your operations, treating your ultimate goals exactly like our own metrics. We invest deeply in cultivation, mutual growth, and tangible impact.",
+      "Our experts cultivate partnerships with a win-win mindset, seeing client success as our own. Committed to mutual growth, we ensure every collaboration delivers impactful results.",
+    image:
+      "https://ahaanmedia.com/ahaanwebsite/All/Top-Talent.png",
     Icon: UsersThree,
   },
   {
     id: "quality",
     index: "04",
     title: "Quality",
-    tagline: "Pioneering Edgy Technologies",
+    tagline: "Quality",
     description:
-      "We break past typical industry best practices by deploying proprietary platforms and custom workflows. Our teams iterate continuously to turn complex strategies into smooth execution.",
+      "We leverage edgy technologies, tools, and platforms to deliver breakthrough results. Beyond industry best practices, our experts innovate continuously, pushing boundaries to drive excellence.",
+    image:
+      "https://ahaanmedia.com/ahaanwebsite/All/Quality.png",
     Icon: SealCheck,
   },
 ];
@@ -147,9 +156,10 @@ export const WhyChooseUs: React.FC = () => {
           <div className="lg:col-span-6 relative w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden group/frame border border-white/5 bg-[#121212]">
             {/* Embedded Static Clean Corporate Visual */}
             <img
-              src="https://ahaanmedia.com/ahaanwebsite/whychooseus/Why-choose-us.webp"
-              alt="Strategic execution environment"
-              className="h-full w-full object-cover grayscale opacity-40 mix-blend-luminosity scale-100 group-hover/frame:scale-105 transition-transform duration-700 ease-out"
+              key={activeReason.id}
+              src={activeReason.image}
+              alt={activeReason.title}
+              className="h-full w-full object-cover grayscale opacity-40 mix-blend-luminosity scale-100 group-hover/frame:scale-105 transition-all duration-700 ease-out animate-[fadeImage_0.6s_ease]"
             />
 
             {/* Dynamic Layout Tint Layer */}
