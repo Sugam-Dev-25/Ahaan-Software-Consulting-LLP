@@ -190,7 +190,7 @@ const Grid: React.FC = () => {
         }
       `}</style>
 
-            <div className="mx-auto my-5 w-full max-w-[1600px] px-4 py-12 sm:px-8 lg:py-5">
+            <div className="mx-auto my-5 w-full max-w-[1600px] px-4 py-2 sm:px-8 lg:py-5">
                 {cardData.map((service, index) => {
                     const isReverse = index % 2 !== 0;
 

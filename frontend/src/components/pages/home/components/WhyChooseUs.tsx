@@ -26,7 +26,7 @@ const REASONS: Reason[] = [
     description:
       "We deliver services with integrity, accuracy, and objectivity, upholding ethical standards, accountability, and credibility while honoring the dignity of labor and striving for excellence.",
     image:
-      "https://ahaanmedia.com/ahaanwebsite/whychooseus/Why-choose-us.webp",
+      "https://ahaanmedia.com/ahaanwebsite/All/Our-values.png",
     Icon: MagnifyingGlassPlus,
   },
   {
@@ -37,7 +37,7 @@ const REASONS: Reason[] = [
     description:
       "We ally with businesses we believe in, ensuring passion drives success. With authenticity at our core, we foster meaningful partnerships that create growth, value, and sustainability.",
     image:
-      "https://ahaanmedia.com/ahaanwebsite/whychooseus/authenticity.webp",
+      "https://ahaanmedia.com/ahaanwebsite/All/Authenticity.png",
     Icon: ShieldCheck,
   },
   {
@@ -48,7 +48,7 @@ const REASONS: Reason[] = [
     description:
       "Our experts cultivate partnerships with a win-win mindset, seeing client success as our own. Committed to mutual growth, we ensure every collaboration delivers impactful results.",
     image:
-      "https://ahaanmedia.com/ahaanwebsite/whychooseus/top-talent.webp",
+      "https://ahaanmedia.com/ahaanwebsite/All/Top-Talent.png",
     Icon: UsersThree,
   },
   {
@@ -59,7 +59,7 @@ const REASONS: Reason[] = [
     description:
       "We leverage edgy technologies, tools, and platforms to deliver breakthrough results. Beyond industry best practices, our experts innovate continuously, pushing boundaries to drive excellence.",
     image:
-      "https://ahaanmedia.com/ahaanwebsite/whychooseus/quality.webp",
+      "https://ahaanmedia.com/ahaanwebsite/All/Quality.png",
     Icon: SealCheck,
   },
 ];

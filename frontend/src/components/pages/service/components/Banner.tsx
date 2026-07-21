@@ -1,7 +1,7 @@
 const Banner: React.FC = () => {
   return (
     <section
-      className=" relative w-full overflow-hidden flex items-center min-h-[380px] sm:min-h-[420px]
+      className=" relative w-full overflow-hidden flex items-center min-h-[300px] sm:min-h-[420px]
                   md:min-h-[480px] lg:min-h-[500px] bg-cover bg-center bg-top md:bg-center bg-no-repeat "
       style={{
         backgroundImage:
