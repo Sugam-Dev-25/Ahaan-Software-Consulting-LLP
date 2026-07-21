@@ -69,16 +69,16 @@ export function HomeBanner() {
   const currentService = SERVICES_DATA[currentIndex];
 
   return (
-    <div className="relative w-full min-h-[600px] lg:min-h-[700px] flex items-center justify-center bg-slate-50/70 overflow-hidden px-4 sm:px-8 py-12 lg:py-20">
+    <div className="relative w-full min-h-[600px] lg:min-h-[700px] flex items-center justify-center bg-slate-50/70 overflow-hidden">
       {/* Brand Golden Ambient Glows */}
       <div className="absolute top-[-10%] right-[-5%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-[#E5C473]/15 blur-[130px] pointer-events-none" />
       <div className="absolute bottom-[-15%] left-[-5%] w-[450px] sm:w-[650px] h-[450px] sm:h-[650px] rounded-full bg-[#C5A85A]/10 blur-[150px] pointer-events-none" />
 
       {/* Constrained to max-w-[1600px] & Fully Responsive */}
-      <div className="max-w-[1600px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10 mx-auto">
+      <div className="relative max-w-[1600px] mx-autow-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-4 xl:gap-8 items-center relative z-10 ">
         {/* Left Typography Column */}
-        <div className="lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8 text-left px-2 sm:px-4">
-          <h1 className="text-[35px] sm:text-[35px] md:text-[45px] lg:text-[63px] font-black text-slate-900 tracking-tight leading-[1.1] min-h-[90px] sm:min-h-[120px] md:min-h-[140px]">
+        <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col justify-center space-y-6 md:space-y-8 text-left px-4 sm:px-8 lg:pl-12 pb-12 lg:py-20">
+          <h1 className="text-2xl sm:text-4xl xl:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] min-h-[90px] sm:min-h-[120px] md:min-h-[140px]">
             <span
               className={`block transition-all duration-300 transform ${
                 isTransitioning
@@ -114,7 +114,7 @@ export function HomeBanner() {
           </p>
 
           {/* Premium Call to Actions */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-8 pt-2">
             <button
               className="shine-btn relative overflow-hidden uppercase
                 bg-gradient-to-r
@@ -140,21 +140,35 @@ export function HomeBanner() {
             </button>
 
             <button className="flex items-center gap-3 text-slate-700 hover:text-slate-900 font-bold py-3 group transition-colors text-sm sm:text-base">
-              <span className="w-11 h-11 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:bg-slate-100 transition-colors">
-                <Play
-                  size={16}
-                  weight="fill"
-                  className="text-[#C5A85A] ml-0.5"
-                />
-              </span>
-              Watch 45 Second Overview
-            </button>
+
+  <span className="relative flex items-center justify-center w-14 h-14">
+
+    {/* Ripple 1 */}
+    <span className="absolute inset-0 rounded-full bg-[#C5A85A]/50 animate-ripple"></span>
+
+    {/* Ripple 2 */}
+    <span className="absolute inset-0 rounded-full bg-[#C5A85A]/50 animate-ripple animation-delay-700"></span>
+
+    {/* Button */}
+    <span className="relative z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+
+      <Play
+        size={16}
+        weight="fill"
+        className="text-[#C5A85A] ml-0.5"
+      />
+
+    </span>
+
+  </span>
+
+</button>
           </div>
         </div>
 
         {/* Right Dynamic Big Image/Illustration Column */}
         {/* Right Tech Orbit */}
-        <div className="lg:col-span-5 flex justify-center lg:justify-end px-2">
+        <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center lg:justify-end ">
           <TechOrbit />
         </div>
       </div>
