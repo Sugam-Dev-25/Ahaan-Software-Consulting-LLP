@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, CheckCircleIcon } from "@phosphor-icons/react";
+import { CheckCircleIcon } from "@phosphor-icons/react";
 
 const features = [
   "Custom Website Development",
@@ -97,11 +97,6 @@ export const AboutCompany = () => {
             {/* Button */}
             <button className="shine-btn group mt-10 inline-flex items-center gap-3  bg-black px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#D4AF37] hover:text-black">
               Explore More
-              <ArrowUpRightIcon
-                size={18}
-                weight="bold"
-                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-              />
             </button>
           </div>
         </div>
