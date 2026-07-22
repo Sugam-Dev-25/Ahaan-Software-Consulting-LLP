@@ -1,4 +1,4 @@
-const Banner: React.FC = () => {
+const ServiceBanner: React.FC = () => {
   return (
     <section
       className=" relative w-full overflow-hidden flex items-center min-h-[300px] sm:min-h-[420px]
@@ -29,4 +29,4 @@ const Banner: React.FC = () => {
   );
 };
 
-export default Banner;
+export default ServiceBanner;
