@@ -151,25 +151,11 @@ export default function WebDevelopment() {
 
         <div className="mb-10 text-center">
 
-          <h2
-            className="
-              mb-3
-              text-3xl
-              font-bold
-              text-transparent
-              bg-gradient-to-r
-              from-black
-              via-[#cfa74a]
-              to-black
-              bg-clip-text
-              sm:text-4xl
-              lg:text-5xl
-            "
-          >
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1c1d20] leading-tight">
             Web Development Projects
           </h2>
 
-          <p className="text-slate-500">
+         <p className="lg:text-base text-sm px-4 sm:px-8 mt-2">
             Explore our recent website projects
           </p>
 
@@ -314,7 +300,8 @@ export default function WebDevelopment() {
                 hover:-translate-y-0.5
                 hover:from-[#B57A0C]
                 hover:to-[#D69D20]"
-            >View All</Link>
+            >View All
+            </Link>
 
       </div>
 

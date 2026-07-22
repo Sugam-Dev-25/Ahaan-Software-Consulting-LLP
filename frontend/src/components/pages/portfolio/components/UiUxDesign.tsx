@@ -268,43 +268,28 @@ export default function UiUxDesign() {
 
       <div className="text-center mt-12">
 
-        <Link
-          to="/all-development"
-          className="
-            inline-flex
-            items-center
-            justify-center
-            px-8
-            py-3
-            rounded-full
-            font-semibold
-            text-black
-            bg-[#E4AD07]
-            relative
-            overflow-hidden
-            group
-            transition-all
-            duration-300
-          "
-        >
-          <span
-            className="
-              absolute
-              inset-0
-              w-0
-              bg-gradient-to-r
-              from-[#A1947B]
-              to-[#7E8391]
-              transition-all
-              duration-300
-              group-hover:w-full
-            "
-          />
-
-          <span className="relative z-10 group-hover:text-white transition-colors">
-            View All
-          </span>
-        </Link>
+       <Link  to="/all-designs"
+              className="shine-btn relative overflow-hidden uppercase
+                bg-gradient-to-r
+                from-[#C48A18]
+                to-[#E6B33C]
+                px-5
+                xl:px-6
+                2xl:px-8
+                py-3
+                xl:py-3.5
+                text-sm
+                xl:text-base
+                font-semibold
+                text-black
+                shadow-xl
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:from-[#B57A0C]
+                hover:to-[#D69D20]"
+            >View All
+            </Link>
 
       </div>
 
