@@ -28,7 +28,7 @@ const OUTER_ICONS = [
   },
   {
     image: "https://ahaanmedia.com/ahaanwebsite/technology/Next.webp",
-    label: "PHP",
+    label: "Next Js",
     angle: 225,
   },
   {
@@ -46,17 +46,17 @@ const OUTER_ICONS = [
 const INNER_ICONS = [
   {
     image: "https://ahaanmedia.com/ahaanwebsite/technology/Figma.webp",
-    label: "Tailwind",
+    label: "Figma",
     angle: 0,
   },
   {
     image: "https://ahaanmedia.com/ahaanwebsite/technology/Webflow.webp",
-    label: "Bootstrap",
+    label: "Webflow",
     angle: 120,
   },
   {
     image: "https://ahaanmedia.com/ahaanwebsite/technology/Framer.webp",
-    label: "Git",
+    label: "Framer",
     angle: 240,
   },
 ];

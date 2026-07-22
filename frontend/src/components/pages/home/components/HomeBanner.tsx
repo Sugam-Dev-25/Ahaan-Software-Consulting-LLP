@@ -18,7 +18,7 @@ const SERVICES_DATA = [
     titleHighlight: "Web Design Experiences",
     subheading:
       "Modern, responsive, and user-focused website designs that deliver exceptional user experiences across all devices.",
-    highlightColorClass: "text-indigo-600",
+    highlightColorClass: "text-rose-400",
   
   },
   {
@@ -27,7 +27,7 @@ const SERVICES_DATA = [
     titleHighlight: "E-Commerce Development",
     subheading:
       "End-to-end eCommerce solutions with secure payments, inventory management, and conversion-focused online stores.",
-    highlightColorClass: "text-blue-600",
+    highlightColorClass: "text-blue-400",
   
   },
   {
@@ -45,7 +45,7 @@ const SERVICES_DATA = [
     titleHighlight: "WordPress Development ",
     subheading:
       "Powerful WordPress websites with custom themes, plugins, optimized performance, and easy content management.",
-    highlightColorClass: "text-amber-600",
+    highlightColorClass: "text-cyan-600",
   
   },
 ];
@@ -150,7 +150,7 @@ export function HomeBanner() {
     <span className="absolute inset-0 rounded-full bg-[#C5A85A]/50 animate-ripple animation-delay-700"></span>
 
     {/* Button */}
-    <span className="relative z-10 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+    <span className="relative z-10 w-11 h-11 rounded-full bg-[#161616] border border-slate-200 shadow-lg flex items-center justify-center group-hover:scale-105 transition-all duration-300">
 
       <Play
         size={16}
