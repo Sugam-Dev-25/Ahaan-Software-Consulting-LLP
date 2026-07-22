@@ -207,7 +207,7 @@ export const Header = () => {
                                   to={item.path}
                                   className="group/item flex items-start gap-3 rounded-xl p-3 transition-all duration-300 hover:bg-[#FFF8EC] hover:shadow-md"
                                 >
-                                  <div className="flex h-10 w-10 shrink-0 items-center justify-center  bg-[#FFF4DF] text-[#161616] transition-all duration-300 group-hover/item:bg-[#CE8827] group-hover/item:text-white">
+                                  <div className="flex h-10 w-10 shrink-0 items-center justify-center  bg-[#FFF4DF] text-[#161616] transition-all duration-300 group-hover/item:bg-[#000] group-hover/item:text-white">
                                     <ArrowRightIcon
                                       size={18}
                                       weight="bold"

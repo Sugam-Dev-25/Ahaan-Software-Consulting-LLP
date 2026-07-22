@@ -16,11 +16,11 @@ export const menuData: MenuItem[] = [
   },
   {
     name: "About us",
-    path: "/about",
+    path: "/about-us",
   },
   {
     name: "IT Services",
-    path: "/services",
+    path: "/service",
   },
   {
     name: "Case Studies",
