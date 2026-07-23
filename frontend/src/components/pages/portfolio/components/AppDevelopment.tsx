@@ -69,10 +69,10 @@ const AppCard = memo(({ src, index }: AppCardProps) => {
 export default function AppDevelopment() {
   return (
     <section className="py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="relative mx-auto max-w-[1600px] px-4">
         {/* Heading */}
         <div className="mb-10 text-center lg:mb-14">
-            
+
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1c1d20] leading-tight">
 
           App Development Designs

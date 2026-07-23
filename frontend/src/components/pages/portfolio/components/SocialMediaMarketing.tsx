@@ -209,7 +209,7 @@ return (
     </div>
 
     {/* Grid */}
-    <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+    <div className="relative mx-auto grid max-w-[1600px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
       {visibleCards.map((card) => (
         <div key={card.id} className="flex justify-center">
           <Card {...card} />

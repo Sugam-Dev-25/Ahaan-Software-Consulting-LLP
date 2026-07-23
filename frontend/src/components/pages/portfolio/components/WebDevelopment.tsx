@@ -147,7 +147,7 @@ export default function WebDevelopment() {
 
     if (loading) {
     return (
-      <section className="mx-auto max-w-7xl px-4 py-8">
+      <section className="relative mx-auto max-w-[1600px] px-4 py-8">
 
         <div className="mb-10 text-center">
 
@@ -221,7 +221,7 @@ export default function WebDevelopment() {
     );
   }
       return (
-    <section className="container mx-auto py-8 overflow-hidden">
+    <section className="relative mx-auto py-8 overflow-hidden">
 
       {/* Heading */}
 

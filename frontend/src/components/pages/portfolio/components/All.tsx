@@ -11,7 +11,7 @@ const SectionSkeleton = () => (
 
 export default function All() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
+    <div className="relative mx-auto w-full max-w-[1600px] px-4 py-2 sm:px-6 lg:px-8">
       <Suspense fallback={<SectionSkeleton />}>
         <div className="mb-10">
           <WebDevelopment />
