@@ -1,26 +1,24 @@
 import React from "react";
 
 export const AboutBanner: React.FC = () => {
-  const bannerStyle: React.CSSProperties = {
-    backgroundImage: `url(https://ahaanmedia.com/ahaanwebsite/Banner/About-Us.webp)`,
-  };
+ 
 
   return (
     <div className="w-full overflow-hidden bg-white">
       <section
-        className="relative flex min-h-[440px] md:min-h-[480px] lg:min-h-[600px] w-full items-center -mt-[80px] md:-mt-[100px] lg:-mt-[120px] bg-cover bg-center bg-no-repeat px-5"
-        style={bannerStyle}
+        className="section-banner"
+        style={{ backgroundImage: `url(https://ahaanmedia.com/ahaanwebsite/Banner/About-Us.webp)`}}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/20 z-1" />
 
         {/* Banner Content Container */}
-        <div className="relative z-10 mx-auto w-full max-w-[1600px] flex justify-start">
-          <div className="max-w-[900px] translate-y-11 md:translate-y-9 lg:translate-y-0">
-            <h1 className="mb-5 text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+        <div className="relative z-10 mx-auto w-full px-4 lg:px-6 max-w-[1600px] flex justify-start">
+          <div className="max-w-[900px] ">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               About Us
             </h1>
-            <p className="max-w-[700px] text-left text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-gray-100">
+            <p className="max-w-[700px]  text-sm  md:text-base lg:text-lg leading-relaxed text-gray-100">
               Empowering businesses through innovation, creativity, and
               technology-driven transformation that accelerates growth, enhances
               efficiency, and builds long-term digital success.
@@ -38,21 +36,15 @@ export const AboutBanner: React.FC = () => {
             <img
               src="https://ahaanmedia.com/ahaanwebsite/All/ASC-Team.png"
               alt="Team Discussion"
-              className="h-auto w-full max-w-[570px] rounded-lg object-cover"
+              className="h-auto w-full rounded-md object-cover"
             />
           </div>
 
           {/* Text Content */}
           <div className="flex flex-col gap-3">
-            <div className="mb-2">
-              <h6 className="inline-block text-xl md:text-2xl font-semibold text-black mb-2">
-                Who We Are
-                <span className="inline-block h-[3px] w-12 bg-[#ffbf00] ml-2.5 align-middle animate-pulse" />
-              </h6>
-              <h2 className="text-3xl md:text-4xl lg:text-[50px] font-bold leading-tight text-transparent bg-clip-text bg-[length:300%_300%] bg-[linear-gradient(40deg,#f9ae00,#3d2f0c,#d49500)] animate-[gradientFlow_4s_ease-in-out_infinite]">
+              <h2 className="heading-primary">
                 Who Are We?
               </h2>
-            </div>
 
             <h3 className="text-xl font-bold text-black">
               Your Tech, Development And Creative Transformation Partner!
@@ -88,15 +80,12 @@ export const AboutBanner: React.FC = () => {
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           {/* Text Content */}
           <div className="flex flex-col gap-3">
-            <div className="mb-2">
-              <h6 className="inline-block text-xl md:text-2xl font-semibold text-black mb-2">
-                Mission & Vision
-                <span className="inline-block h-[3px] w-12 bg-[#ffbf00] ml-2.5 align-middle animate-pulse" />
-              </h6>
-              <h2 className="text-3xl md:text-4xl lg:text-[50px] font-bold leading-tight text-transparent bg-clip-text bg-[length:300%_300%] bg-[linear-gradient(40deg,#f9ae00,#3d2f0c,#d49500)] animate-[gradientFlow_4s_ease-in-out_infinite]">
+           
+
+              <h2 className="heading-primary">
                 Our Mission & Vision
               </h2>
-            </div>
+
 
             <h4 className="text-xl font-bold text-black">Mission</h4>
             <p className="text-base leading-relaxed text-gray-600 text-left">

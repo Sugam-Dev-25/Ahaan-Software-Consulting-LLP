@@ -1,0 +1,110 @@
+import { memo, useState } from "react";
+
+const imageLinks = [
+  "https://ahaanmedia.com/ahaanwebsite/AppDevelopment/1.webp",
+  "https://ahaanmedia.com/ahaanwebsite/AppDevelopment/2.webp",
+  "https://ahaanmedia.com/ahaanwebsite/AppDevelopment/3.webp",
+  "https://ahaanmedia.com/ahaanwebsite/AppDevelopment/4.webp",
+  "https://ahaanmedia.com/ahaanwebsite/AppDevelopment/5.webp",
+];
+
+type AppCardProps = {
+  src: string;
+  index: number;
+};
+
+const AppCard = memo(({ src, index }: AppCardProps) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div
+      className="
+      group
+      relative
+      overflow-hidden
+      rounded-2xl
+      bg-white
+      p-4
+      shadow-xl
+      transition-all
+      duration-300
+      hover:-translate-y-3
+      hover:scale-105
+      hover:shadow-2xl
+    "
+    >
+      {!loaded && (
+        <div
+          className="
+          absolute
+          inset-0
+          animate-pulse
+          rounded-2xl
+          bg-gradient-to-r
+          from-gray-200
+          via-gray-100
+          to-gray-200
+        "
+        />
+      )}
+
+      <img
+        src={src}
+        alt={`App Design ${index + 1}`}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        className={`
+          w-full
+          rounded-xl
+          transition-opacity
+          duration-300
+          ${loaded ? "opacity-100" : "opacity-0"}
+        `}
+      />
+    </div>
+  );
+});
+
+export default function AppDevelopment() {
+  return (
+    <section className="py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Heading */}
+        <div className="mb-10 text-center lg:mb-14">
+            
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1c1d20] leading-tight">
+
+          App Development Designs
+        </h2>
+
+        <p className="lg:text-base text-sm px-4 sm:px-8 mt-2">
+
+         
+            Clean and modern designs for mobile and web applications
+          </p>
+        </div>
+
+        {/* Gallery */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-6
+            sm:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-5
+          "
+        >
+          {imageLinks.map((img, index) => (
+            <AppCard
+              key={img}
+              src={img}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
