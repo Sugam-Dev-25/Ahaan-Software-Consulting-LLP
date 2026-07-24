@@ -23,6 +23,7 @@ import { PolicyDetails } from "../components/pages/quicklinks/PolicyDetails";
 import { CaseStudyDetails } from "../components/pages/casestudy/components/CaseStudyDetails";
 import { BlogDetails } from "../components/pages/blog/components/BlogDetails";
 import { SearchResults } from "../components/pages/blog/components/SearchResults";
+import  { CareerDetails } from "../components/pages/career/components/CareerDetails";
 
 export const AllRoutes = () => {
   return (
@@ -51,6 +52,7 @@ export const AllRoutes = () => {
         <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path='/blog/search' element={<SearchResults />} />
+        <Route path="/careers/:jobId" element={<CareerDetails/>} />
       </Route>
     </Routes>
   );
