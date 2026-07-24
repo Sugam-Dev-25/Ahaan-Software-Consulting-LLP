@@ -21,32 +21,36 @@ import { SocialNetworking } from "../components/pages/solution/components/Social
 import { TravelHospitality } from "../components/pages/solution/components/TravelHospitality";
 import { PolicyDetails } from "../components/pages/quicklinks/PolicyDetails";
 import { CaseStudyDetails } from "../components/pages/casestudy/components/CaseStudyDetails";
+import { BlogDetails } from "../components/pages/blog/components/BlogDetails";
+import { SearchResults } from "../components/pages/blog/components/SearchResults";
 
 export const AllRoutes = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-      <Route path="/" element={<HomeComponent />} />
-      <Route path="/about-us" element={<AboutComponent />} />
-      <Route path="/service" element={<ServiceComponent />} />
-      <Route path="/blog" element={<BlogComponent />} />
-      <Route path="/portfolio" element={<PortfolioComponent/>} />
-      <Route path="/solution" element={<SolutionComponent />} />
-      <Route path="/solution/ecommerce" element={<EcommerceSolution/>} />
-      <Route path="/solution/education" element={<Education/>} />
-      <Route path="/solution/construction" element={<Construction/>} />
-      <Route path="/solution/healthcare" element={<HealthcareSolution/>} />
-      <Route path="/solution/logistics" element={<Logistics/>} />
-      <Route path="/solution/manufacturing" element={<Manufacturing/>} />
-      <Route path="/solution/media-entertainment" element={<MediaEntertainment/>} />
-      <Route path="/solution/real-estate" element={<RealEstate/>} />
-      <Route path="/solution/social-networking" element={<SocialNetworking/>} />
-      <Route path="/solution/travel-hospitality" element={<TravelHospitality/>} />
-      <Route path="/career" element={<CareerComponent />} />
-      <Route path="/case-study" element={<CaseStudyComponent />} />
-      <Route path="/contact-us" element={<ContactComponent />} />
-      <Route path="/:slug" element={<PolicyDetails />} />
-       <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
+        <Route path="/" element={<HomeComponent />} />
+        <Route path="/about-us" element={<AboutComponent />} />
+        <Route path="/service" element={<ServiceComponent />} />
+        <Route path="/blog" element={<BlogComponent />} />
+        <Route path="/portfolio" element={<PortfolioComponent />} />
+        <Route path="/solution" element={<SolutionComponent />} />
+        <Route path="/solution/ecommerce" element={<EcommerceSolution />} />
+        <Route path="/solution/education" element={<Education />} />
+        <Route path="/solution/construction" element={<Construction />} />
+        <Route path="/solution/healthcare" element={<HealthcareSolution />} />
+        <Route path="/solution/logistics" element={<Logistics />} />
+        <Route path="/solution/manufacturing" element={<Manufacturing />} />
+        <Route path="/solution/media-entertainment" element={<MediaEntertainment />} />
+        <Route path="/solution/real-estate" element={<RealEstate />} />
+        <Route path="/solution/social-networking" element={<SocialNetworking />} />
+        <Route path="/solution/travel-hospitality" element={<TravelHospitality />} />
+        <Route path="/career" element={<CareerComponent />} />
+        <Route path="/case-study" element={<CaseStudyComponent />} />
+        <Route path="/contact-us" element={<ContactComponent />} />
+        <Route path="/:slug" element={<PolicyDetails />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
+        <Route path='/blog/search' element={<SearchResults />} />
       </Route>
     </Routes>
   );
