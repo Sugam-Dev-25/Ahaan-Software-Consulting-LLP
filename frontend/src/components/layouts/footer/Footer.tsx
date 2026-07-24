@@ -50,21 +50,27 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-type SectionKey = 'about' | 'pages' | 'quickLinks' | 'contact';
-  const [openSection, setOpenSection] = useState<SectionKey| null>(null)
+  type SectionKey = 'about' | 'pages' | 'quickLinks' | 'contact';
+  const [openSection, setOpenSection] = useState<SectionKey | null>(null)
 
   const toggleSection = (sectionKey: SectionKey) => {
-  setOpenSection((prev) => (prev === sectionKey ? null : sectionKey));
-};
+    setOpenSection((prev) => (prev === sectionKey ? null : sectionKey));
+  };
 
-  const pages = ["Home", "About Us", "Services", "Solutions", "Careers"];
+  const pages = [
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about-us" },
+    { name: "Services", url: "/service" },
+    { name: "Solutions", url: "/solution" },
+    { name: "Careers", url: "/career" },
+  ];
 
   const quickLinks = [
-    "Cookie Policy",
-    "Environmental Policy",
-    "Grievance Policy",
-    "Information Security Policy",
-    "Intellectual Property Policy",
+    { name: "Cookie Policy", url: "/cookie-policy" },
+    { name: "Environmental Policy", url: "/environmental-policy" },
+    { name: "Grievance Policy", url: "/grievance-policy" },
+    { name: "Information Security Policy", url: "/information-security-policy" },
+    { name: "Intellectual Property Policy", url: "/intellectual-property-policy" },
   ];
   return (
     <footer className="relative overflow-hidden bg-[#000] text-white">
@@ -144,248 +150,240 @@ type SectionKey = 'about' | 'pages' | 'quickLinks' | 'contact';
 
         {/* ================= Footer Grid Start ================= */}
 
-    <div className="grid gap-4 py-5 sm:gap-10 xl:gap-14 sm:grid-cols-2 lg:[grid-template-columns:2fr_1fr_1.3fr_2fr] ">
-        
-        {/* ================= ABOUT COMPANY ================= */}
-        <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
-          <button
-            onClick={() => toggleSection("about")}
-            className="flex w-full items-center justify-between text-left sm:cursor-default"
-          >
-            <div>
-              <h3 className="text-2xl font-semibold uppercase">About Company</h3>
-              <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
-            </div>
-            <CaretDown
-  size={20}
-  className={`transition-transform duration-300 sm:hidden ${
-    openSection === "about" ? "rotate-180" : ""
-  }`}
-/>
-          </button>
+        <div className="grid gap-4 py-5 sm:gap-10 xl:gap-14 sm:grid-cols-2 lg:[grid-template-columns:2fr_1fr_1.3fr_2fr] ">
 
-         <div
-  className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${
-    openSection === "about"
-      ? "grid-rows-[1fr] opacity-100 mt-6"
-      : "grid-rows-[0fr] opacity-0 sm:mt-8"
-  }`}
->
-            <div className="overflow-hidden">
-              <p className="leading-8 text-gray-400">
-                Professionally redefine transparent ROI through low-risk
-                high-yield imperatives. Progressively create empowered users via
-                team driven solutions.
-              </p>
+          {/* ================= ABOUT COMPANY ================= */}
+          <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
+            <button
+              onClick={() => toggleSection("about")}
+              className="flex w-full items-center justify-between text-left sm:cursor-default"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold uppercase">About Company</h3>
+                <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
+              </div>
+              <CaretDown
+                size={20}
+                className={`transition-transform duration-300 sm:hidden ${openSection === "about" ? "rotate-180" : ""
+                  }`}
+              />
+            </button>
 
-              <div className="mt-6 flex pl-4 gap-2.5 xl:gap-4 sm:mt-12">
-                {socialLinks.map(
-                  ({ name, url, Icon, gradient, tooltipGradient }) => (
-                    <a
-                      key={name}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-xl text-[#757575] transition-all duration-350 ease-in-out hover:-translate-y-1 hover:text-white ${gradient}`}
-                    >
-                      {/* Tooltip */}
-                      <span
-                        className={`pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-2.5 py-1 text-xs text-white opacity-0 transition-all duration-300 ease-in-out group-hover:top-[-40px] group-hover:opacity-100 ${tooltipGradient}`}
+            <div
+              className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${openSection === "about"
+                ? "grid-rows-[1fr] opacity-100 mt-6"
+                : "grid-rows-[0fr] opacity-0 sm:mt-8"
+                }`}
+            >
+              <div className="overflow-hidden">
+                <p className="leading-8 text-gray-400">
+                  Professionally redefine transparent ROI through low-risk
+                  high-yield imperatives. Progressively create empowered users via
+                  team driven solutions.
+                </p>
+
+                <div className="mt-6 flex pl-4 gap-2.5 xl:gap-4 sm:mt-12">
+                  {socialLinks.map(
+                    ({ name, url, Icon, gradient, tooltipGradient }) => (
+                      <a
+                        key={name}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-xl text-[#757575] transition-all duration-350 ease-in-out hover:-translate-y-1 hover:text-white ${gradient}`}
                       >
-                        {name}
+                        {/* Tooltip */}
                         <span
-                          className={`absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 ${tooltipGradient}`}
-                        />
+                          className={`pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-2.5 py-1 text-xs text-white opacity-0 transition-all duration-300 ease-in-out group-hover:top-[-40px] group-hover:opacity-100 ${tooltipGradient}`}
+                        >
+                          {name}
+                          <span
+                            className={`absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 ${tooltipGradient}`}
+                          />
+                        </span>
+
+                        <Icon size={20} weight="fill" />
+                      </a>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ================= PAGES ================= */}
+          <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
+            <button
+              onClick={() => toggleSection("pages")}
+              className="flex w-full items-center justify-between text-left sm:cursor-default"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold uppercase">Pages</h3>
+                <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
+              </div>
+              <CaretDown
+                size={20}
+                className={`transition-transform duration-300 sm:hidden ${openSection === "pages" ? "rotate-180" : ""
+                  }`}
+              />
+            </button>
+
+            <div
+              className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${openSection === "pages"
+                ? "grid-rows-[1fr] opacity-100 mt-6"
+                : "grid-rows-[0fr] opacity-0 sm:mt-8"
+                }`}
+            >
+              <div className="overflow-hidden">
+                <ul className="space-y-4 sm:space-y-5">
+                  {pages.map((item, index) => (
+                    <li
+                      key={index}
+                      className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
+                    >
+                      <span className="text-[#E6B33C] transition group-hover:translate-x-1">
+                        →
                       </span>
+                      <a href={item.url}>{item.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
 
-                      <Icon size={20} weight="fill" />
+          {/* ================= QUICK LINKS ================= */}
+          <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
+            <button
+              onClick={() => toggleSection("quickLinks")}
+              className="flex w-full items-center justify-between text-left sm:cursor-default"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold uppercase">Quick Links</h3>
+                <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
+              </div>
+              <CaretDown
+                size={20}
+                className={`transition-transform duration-300 sm:hidden ${openSection === "quickLinks" ? "rotate-180" : ""
+                  }`}
+              />
+            </button>
+
+            <div
+              className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${openSection === "quickLinks"
+                ? "grid-rows-[1fr] opacity-100 mt-6"
+                : "grid-rows-[0fr] opacity-0 sm:mt-8"
+                }`}
+            >
+              <div className="overflow-hidden">
+                <ul className="space-y-4 sm:space-y-5">
+                  {quickLinks.map((item, index) => (
+                    <li
+                      key={index}
+                      className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
+                    >
+                      <span className="text-[#E6B33C] transition group-hover:translate-x-1">
+                        →
+                      </span>
+                      <a href={item.url}>{item.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* ================= CONTACT INFO ================= */}
+          <div>
+            <button
+              onClick={() => toggleSection("contact")}
+              className="flex w-full items-center justify-between text-left sm:cursor-default"
+            >
+              <div>
+                <h3 className="text-2xl font-semibold uppercase">Contact Info</h3>
+                <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
+              </div>
+              <CaretDown
+                size={20}
+                className={`transition-transform duration-300 sm:hidden ${openSection === "contact" ? "rotate-180" : ""
+                  }`}
+              />
+            </button>
+
+            <div
+              className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${openSection === "contact"
+                ? "grid-rows-[1fr] opacity-100 mt-6"
+                : "grid-rows-[0fr] opacity-0 sm:mt-8"
+                }`}
+            >
+              <div className="overflow-hidden space-y-6 sm:space-y-8">
+                {/* Address */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <MapPin size={22} weight="fill" className="text-[#E6B33C]" />
+                  </div>
+                  <div>
+                    <p className="mt-1 leading-7 text-gray-400">
+                      Bengal Eco Intelligent Park, EM <br />
+                      Block, Sector V, Kolkata-700 091
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <PhoneCall
+                      size={22}
+                      weight="fill"
+                      className="text-[#E6B33C]"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="tel:+16465759575"
+                      className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                    >
+                      +1-646-575-9575
                     </a>
-                  )
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ================= PAGES ================= */}
-        <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
-          <button
-            onClick={() => toggleSection("pages")}
-            className="flex w-full items-center justify-between text-left sm:cursor-default"
-          >
-            <div>
-              <h3 className="text-2xl font-semibold uppercase">Pages</h3>
-              <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
-            </div>
-            <CaretDown
-  size={20}
-  className={`transition-transform duration-300 sm:hidden ${
-    openSection === "pages" ? "rotate-180" : ""
-  }`}
-/>
-          </button>
-
-         <div
-  className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${
-    openSection === "pages"
-      ? "grid-rows-[1fr] opacity-100 mt-6"
-      : "grid-rows-[0fr] opacity-0 sm:mt-8"
-  }`}
->
-            <div className="overflow-hidden">
-              <ul className="space-y-4 sm:space-y-5">
-                {pages.map((item, index) => (
-                  <li
-                    key={index}
-                    className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
-                  >
-                    <span className="text-[#E6B33C] transition group-hover:translate-x-1">
-                      →
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* ================= QUICK LINKS ================= */}
-        <div className="border-b border-white/10 pb-4 sm:border-none sm:pb-0">
-          <button
-            onClick={() => toggleSection("quickLinks")}
-            className="flex w-full items-center justify-between text-left sm:cursor-default"
-          >
-            <div>
-              <h3 className="text-2xl font-semibold uppercase">Quick Links</h3>
-              <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
-            </div>
-            <CaretDown
-  size={20}
-  className={`transition-transform duration-300 sm:hidden ${
-    openSection === "quickLinks" ? "rotate-180" : ""
-  }`}
-/>
-          </button>
-
-          <div
-  className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${
-    openSection === "quickLinks"
-      ? "grid-rows-[1fr] opacity-100 mt-6"
-      : "grid-rows-[0fr] opacity-0 sm:mt-8"
-  }`}
->
-            <div className="overflow-hidden">
-              <ul className="space-y-4 sm:space-y-5">
-                {quickLinks.map((item, index) => (
-                  <li
-                    key={index}
-                    className="group flex cursor-pointer items-center gap-3 text-gray-300 transition hover:text-white"
-                  >
-                    <span className="text-[#E6B33C] transition group-hover:translate-x-1">
-                      →
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* ================= CONTACT INFO ================= */}
-        <div>
-          <button
-            onClick={() => toggleSection("contact")}
-            className="flex w-full items-center justify-between text-left sm:cursor-default"
-          >
-            <div>
-              <h3 className="text-2xl font-semibold uppercase">Contact Info</h3>
-              <div className="hidden sm:block mt-2 h-[2px] w-24 bg-[#E6B33C] sm:mt-5"></div>
-            </div>
-            <CaretDown
-  size={20}
-  className={`transition-transform duration-300 sm:hidden ${
-    openSection === "contact" ? "rotate-180" : ""
-  }`}
-/>
-          </button>
-
-          <div
-  className={`grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr] sm:opacity-100 ${
-    openSection === "contact"
-      ? "grid-rows-[1fr] opacity-100 mt-6"
-      : "grid-rows-[0fr] opacity-0 sm:mt-8"
-  }`}
->
-            <div className="overflow-hidden space-y-6 sm:space-y-8">
-              {/* Address */}
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
-                  <MapPin size={22} weight="fill" className="text-[#E6B33C]" />
+                    <a
+                      href="tel:+919830371143"
+                      className="block text-gray-400 hover:text-[#E6B33C]"
+                    >
+                      +91-983-037-1143
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="mt-1 leading-7 text-gray-400">
-                    Bengal Eco Intelligent Park, EM <br />
-                    Block, Sector V, Kolkata-700 091
-                  </p>
-                </div>
-              </div>
 
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
-                  <PhoneCall
-                    size={22}
-                    weight="fill"
-                    className="text-[#E6B33C]"
-                  />
-                </div>
-                <div>
-                  <a
-                    href="tel:+16465759575"
-                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
-                  >
-                    +1-646-575-9575
-                  </a>
-                  <a
-                    href="tel:+919830371143"
-                    className="block text-gray-400 hover:text-[#E6B33C]"
-                  >
-                    +91-983-037-1143
-                  </a>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
-                  <EnvelopeSimple
-                    size={22}
-                    weight="fill"
-                    className="text-[#E6B33C]"
-                  />
-                </div>
-                <div>
-                  <a
-                    href="mailto:support@ahaansoftware.com"
-                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
-                  >
-                    support@ahaansoftware.com
-                  </a>
-                  <a
-                    href="mailto:hr@ahaansoftware.com"
-                    className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
-                  >
-                    hr@ahaansoftware.com
-                  </a>
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <EnvelopeSimple
+                      size={22}
+                      weight="fill"
+                      className="text-[#E6B33C]"
+                    />
+                  </div>
+                  <div>
+                    <a
+                      href="mailto:support@ahaansoftware.com"
+                      className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                    >
+                      support@ahaansoftware.com
+                    </a>
+                    <a
+                      href="mailto:hr@ahaansoftware.com"
+                      className="mt-1 block text-gray-400 hover:text-[#E6B33C]"
+                    >
+                      hr@ahaansoftware.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
+        </div>
 
         {/* Bottom Divider */}
         <div className="border-t border-gray-800"></div>
@@ -401,13 +399,13 @@ type SectionKey = 'about' | 'pages' | 'quickLinks' | 'contact';
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
-            <a href="#" className="transition hover:text-[#6c4cff]">
+            <a href="/privacy-policy" className="transition hover:text-[#6c4cff]">
               Privacy Policy
             </a>
 
             <span className="text-gray-700">|</span>
 
-            <a href="#" className="transition hover:text-[#6c4cff]">
+            <a href="/terms-conditions" className="transition hover:text-[#6c4cff]">
               Terms & Conditions
             </a>
           </div>
