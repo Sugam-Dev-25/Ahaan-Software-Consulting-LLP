@@ -121,7 +121,7 @@ export  function AllUiUxDesign() {
   const [selectedCategory, setSelectedCategory] =
     useState<string>("all");
 
-  const [ loading,setLoading] = useState(true);
+  
 
   useEffect(() => {
     let cancelled = false;
@@ -149,11 +149,7 @@ export  function AllUiUxDesign() {
         if (!cancelled) {
           setDesigns([]);
         }
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-        }
-      }
+      } 
     };
 
     loadDesigns();
