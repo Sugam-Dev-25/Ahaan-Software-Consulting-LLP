@@ -79,7 +79,7 @@ export const BlogPage = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [selectedReactions, setSelectedReactions] = useState<SelectedReactions>({});
   const [reactionCounts, setReactionCounts] = useState<ReactionCounts>({});
-  const [searchQuery, setSearchQuery] = useState<string>("");
+//   const [searchQuery, setSearchQuery] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [activeShare, setActiveShare] = useState<string | number | null>(null);
 
@@ -117,9 +117,9 @@ export const BlogPage = () => {
     fetchAndUpdateBlogs();
   }, []);
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery]);
+//   useEffect(() => {
+//     setCurrentPage(1);
+//   }, [searchQuery]);
 
   const handleReaction = async (
     blogId: string | number,
@@ -159,28 +159,29 @@ export const BlogPage = () => {
     }
   };
 
-  const filteredBlogs = blogs.filter(
-    (blog) =>
-      blog.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      blog.author?.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+//   const filteredBlogs = blogs.filter(
+//     (blog) =>
+//       blog.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+//       blog.author?.toLowerCase().includes(searchQuery.toLowerCase())
+//   );
 
-  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
-  const paginatedBlogs = filteredBlogs.slice(
-    (currentPage - 1) * blogsPerPage,
-    currentPage * blogsPerPage
-  );
+// After
+const totalPages = Math.ceil(blogs.length / blogsPerPage);
+const paginatedBlogs = blogs.slice(
+  (currentPage - 1) * blogsPerPage,
+  currentPage * blogsPerPage
+);
 
   return (
     <div className="container mx-auto lg:px-6 px-4 py-8 max-w-[1600px]">
       {/* Search Bar */}
-      {/* <div className="mb-6 text-center">
+      {/* <div className="mb-6 text-right">
         <input
           type="text"
           placeholder="Search blogs..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full max-w-md px-4 py-2 border border-[#c78a2b] rounded-full text-sm font-sans focus:outline-none focus:border-black transition-colors"
+          className="w-full max-w-md px-4 py-2 border border-[#c78a2b] rounded-md text-sm font-sans focus:outline-none focus:border-black transition-colors"
         />
       </div> */}
 

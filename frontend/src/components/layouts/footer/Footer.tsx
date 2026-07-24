@@ -244,7 +244,7 @@ export const Footer = () => {
                       <span className="text-[#E6B33C] transition group-hover:translate-x-1">
                         →
                       </span>
-                      <a href={item.url}>{item.name}</a>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">{item.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -285,7 +285,7 @@ export const Footer = () => {
                       <span className="text-[#E6B33C] transition group-hover:translate-x-1">
                         →
                       </span>
-                      <a href={item.url}>{item.name}</a>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">{item.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -399,13 +399,13 @@ export const Footer = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
-            <a href="/privacy-policy" className="transition hover:text-[#6c4cff]">
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="transition hover:text-[#6c4cff]">
               Privacy Policy
             </a>
 
             <span className="text-gray-700">|</span>
 
-            <a href="/terms-conditions" className="transition hover:text-[#6c4cff]">
+            <a href="/terms-conditions" target="_blank" rel="noopener noreferrer" className="transition hover:text-[#6c4cff]">
               Terms & Conditions
             </a>
           </div>
