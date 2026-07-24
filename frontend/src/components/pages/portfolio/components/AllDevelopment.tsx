@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllDevelopmentsAPI } from "../../../../api/Api";
+import AllDevBanner from "./AllDevBanner";
 
 type DevelopmentItem = {
   _id?: string;
@@ -48,8 +49,12 @@ export  function AllDevelopment() {
   }, []);
 
   return (
-    <section className="py-10 sm:py-14 lg:py-16">
-      <div className="mx-auto max-w-7xl px-4">
+    <>
+<AllDevBanner/>
+    <div className="py-10 sm:py-14 lg:py-16">
+        
+        
+      <div className="relative mx-auto max-w-[1600px] px-4">
 
         {/* Loading Skeleton */}
         {loading ? (
@@ -131,6 +136,7 @@ export  function AllDevelopment() {
         )}
 
       </div>
-    </section>
+    </div>
+    </>
   );
 }

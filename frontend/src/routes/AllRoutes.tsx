@@ -22,6 +22,7 @@ import { TravelHospitality } from "../components/pages/solution/components/Trave
 import { PolicyDetails } from "../components/pages/quicklinks/PolicyDetails";
 import { CaseStudyDetails } from "../components/pages/casestudy/components/CaseStudyDetails";
 import { AllDevelopment } from "../components/pages/portfolio/components/AllDevelopment";
+import { AllUiUxDesign } from "../components/pages/portfolio/components/AllUiUxDesign";
 
 export const AllRoutes = () => {
   return (
@@ -32,7 +33,8 @@ export const AllRoutes = () => {
       <Route path="/service" element={<ServiceComponent />} />
       <Route path="/blog" element={<BlogComponent />} />
       <Route path="/portfolio" element={<PortfolioComponent/>} />
-      <Route path="/portfolio/all-development" element={<AllDevelopment />} />
+      <Route path="/all-development" element={<AllDevelopment />} />
+      <Route path="/all-design" element={<AllUiUxDesign />} />
       <Route path="/solution" element={<SolutionComponent />} />
       <Route path="/solution/ecommerce" element={<EcommerceSolution/>} />
       <Route path="/solution/education" element={<Education/>} />
