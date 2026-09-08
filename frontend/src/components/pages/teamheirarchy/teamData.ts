@@ -94,6 +94,23 @@ export const teamMembers: TeamMember[] = [
   },
 
   {
+    id: "content-writer",
+    name: "Tania Ghosh",
+    designation: "Content Writer",
+    specialist: [
+      "Content Strategy",
+      "Copywriting",
+      "SEO",
+      "Digital Marketing",
+    ],
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    description:
+      "Creates compelling and engaging content for various digital platforms and marketing materials.",
+    parentId: "project-manager",
+    department: "Content Writing",
+  },
+
+  {
     id: "senior-associate",
     name: "Soumitra Maity",
     designation: "Senior Associate",
